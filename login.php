@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'includes/header.php' ?>
 
 
 <?php
@@ -22,7 +22,8 @@
             if (password_verify($password, $result['password'])) {
               
                 $_SESSION['user_id'] = $result['id'];
-                $_SESSION['user_id'] = $result['name'];
+                $_SESSION['user_name'] = $result['name'];
+				        $_SESSION['role'] = $result['role'];
 
                 $uid = $result['id'];
 
@@ -35,9 +36,14 @@
                   'add_logout_button();',
                   '</script>'
                 ;
-				
+
                 echo '<p class="success">Congratulations, you are logged in!</p>';
-                header("Location: home.php");
+
+				if ($result['role'] == "Admin") {
+					header("Location: admin.php");
+				} else{
+					header("Location: home.php");
+				}
 
                 exit;				
             } else {
@@ -66,4 +72,4 @@
 </div>
 
 
-<?php include 'footer.php' ?>
+<?php include 'includes/footer.php' ?>

@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'includes/header.php' ?>
 
 <?php
     session_start();
@@ -65,8 +65,13 @@
             <input type="password" name="password" required />
         </div>    
         <div class="form-element">
-            <label>Role</label>
-            <input type="text" name="role" required />
+            <label for="role">Role</label>
+            <select id="role" name="role">
+                <option value="Researcher/Academia">Researcher/Academia</option>
+                <option value="Industry Professional">Industry Professional</option>
+                <option value="Parent">Parent</option>
+            </select>
+
         </div>
         <div class="form-element">
             <label style="font-size: 20px;">Please provide a short desciprtion of how you intend to use GEO's data</label>
@@ -76,4 +81,4 @@
     </form>
 </div>
 
-<?php include 'footer.php' ?>
+<?php include 'includes/footer.php' ?>
