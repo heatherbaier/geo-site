@@ -25,9 +25,10 @@ html, body {
 }
 
 .dropbtn {
-    background-color: none;
+    background-color: white;
     border: none;
     cursor: pointer;
+    color: black;
 }
 
 .dropdown-content {
@@ -229,7 +230,7 @@ p.error {
     padding-left: 0;
     margin-left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 #wrapper.active {
     padding-left: 220px;
@@ -367,13 +368,17 @@ p.error {
 }
 
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
+.item1 { grid-area: add_blog; }
+.item2 { grid-area: add_user; }
+.item3 { grid-area: remove_user; }
+.item4 { grid-area: think; }
+
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header menu';    
+    'add_blog add_user'
+    'remove_user think';    
   gap: 50px;
   padding: 150px;
 
@@ -402,4 +407,10 @@ p.error {
 .grid-container > div > h3 {
     font-size: 15px;
     color: white;
+}
+
+
+.admin-button:hover {
+    background-color: #385B94;
+    cursor: pointer;
 }

@@ -34,15 +34,10 @@
 			<?php 
                 session_start();
                 $uid = $_SESSION['user_id'];
-                is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
-                
-				if (!empty($uid)) {
-
+				if (isset($uid)) {
 					print_r("<a href='home.php'>Dashboard</a>");
-
 				}
-				
-				// is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
+                is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
 			?>
 
 		</div>
