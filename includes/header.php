@@ -23,26 +23,30 @@
 
 
 <body>
-
-	<div class="dropdown" style="float: right;">
-		<div class="header-cont">
+	<div id="header-cont">
+		<div class="dropdown" style="float: right;">
+			
+				<!-- <div> -->
 			<button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
-		</div>
-		<div class="dropdown-content">
-			<a href="index.php">Home</a>
-			<a href="#">About</a>
-			<a href="#">School Map</a>
+				<!-- </div> -->
+			
+			<div class="dropdown-content">
+				<a href="index.php">Home</a>
+				<a href="#">About</a>
+				<a href="#">School Map</a>
 
-			<?php 
-                session_start();
-                $uid = $_SESSION['user_id'];
-				if (isset($uid)) {
-					print_r("<a href='home.php'>Dashboard</a>");
-				}
-                is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
-			?>
+				<?php 
+					session_start();
+					$uid = $_SESSION['user_id'];
+					if (isset($uid)) {
+						print_r("<a href='home.php'>Dashboard</a>");
+					}
+					is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
+				?>
 
+			</div>
 		</div>
+
 	</div>
 
 	<div id="main">
