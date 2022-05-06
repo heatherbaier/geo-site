@@ -386,8 +386,8 @@ p.error {
 }
 
 .grid-container > div {
-    background-color: #2B4570;
-    border-radius: 10px;
+    background-color: #A37A74;
+    /* border-radius: 10px; */
     text-align: center;
     padding: 20px 0;
     /* font-size: 30px; */
@@ -412,6 +412,9 @@ p.error {
 
 
 .admin-button:hover {
-    background-color: #385B94;
+    background-color: #E28665;
     cursor: pointer;
 }
+
+
+/* .header */

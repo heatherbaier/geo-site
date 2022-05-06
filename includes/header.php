@@ -25,7 +25,9 @@
 <body>
 
 	<div class="dropdown" style="float: right;">
-		<button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+		<div class="header-cont">
+			<button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+		</div>
 		<div class="dropdown-content">
 			<a href="index.php">Home</a>
 			<a href="#">About</a>
