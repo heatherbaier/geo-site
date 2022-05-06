@@ -16,15 +16,11 @@
             <li><a  class="dash-nav" id="dash-nav-history" href="download_history.php">Download History<span class="material-symbols-outlined dash-icon">file_download</span></a></li>
             
             <?php
-
                 session_start();
-
                 $role = $_SESSION['role'];
-                
                 if ($_SESSION['role'] == "Admin") {
                     echo "<li><a href='admin.php'>Admin Dashboard<span class='material-symbols-outlined dash-icon'>file_download</span></a></li>";  
                 }
-
             ?>
         
         

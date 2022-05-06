@@ -1,6 +1,8 @@
 <?php include 'includes/header.php' ?>
 
 
+
+
 <?php
     session_start();
     include('config.php');
@@ -32,12 +34,7 @@
                 $la_updateq->bindParam("uid", $uid, PDO::PARAM_STR);
                 $la_result = $la_updateq->execute();
 
-                echo '<script type="text/javascript">',
-                  'add_logout_button();',
-                  '</script>'
-                ;
-
-                echo '<p class="success">Congratulations, you are logged in!</p>';
+                // echo '<p class="success">Congratulations, you are logged in!</p>';
 
 				if ($result['role'] == "Admin") {
 					header("Location: admin.php");
@@ -70,6 +67,13 @@
     <button type="submit" name="login" value="login">Log In</button>
   </form>
 </div>
+
+
+<!-- <script>
+function add_logout_button() {
+    console.log("in logout button function!")
+}
+</script> -->
 
 
 <?php include 'includes/footer.php' ?>

@@ -15,7 +15,9 @@
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-	<link href="js/logout.js" type="text/javascript">
+	<!-- <link href= type="text/javascript"> -->
+	<!-- <script src="js/logout.js"></script> -->
+
 	
 </head>
 
@@ -25,9 +27,24 @@
 	<div class="dropdown" style="float: right;">
 		<button class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
 		<div class="dropdown-content">
+			<a href="index.php">Home</a>
 			<a href="#">About</a>
 			<a href="#">School Map</a>
-			<a href="#">Login</a>
+
+			<?php 
+                session_start();
+                $uid = $_SESSION['user_id'];
+                is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
+                
+				if (!empty($uid)) {
+
+					print_r("<a href='home.php'>Dashboard</a>");
+
+				}
+				
+				// is_null($uid) ? print_r("<a href='login.php'>Login</a>") : print_r("<a href='logout.php'>Logout</a>");
+			?>
+
 		</div>
 	</div>
 
