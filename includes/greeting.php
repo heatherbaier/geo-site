@@ -1,5 +1,4 @@
 <script>
-
     var data = <?php echo json_encode($_SESSION['user_name'], JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
     const node = document.createElement("h1");
     node.style.fontFamily = 'Montserrat';

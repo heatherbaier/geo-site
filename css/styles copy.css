@@ -3,7 +3,7 @@ html, body {
     /* width: 100%; */
     height: 100%;
     /* position: absolute; */
-    /* overflow: hidden; */
+    overflow: hidden;
     /* background-color: #BFC5D9; */
     font-family: 'Montserrat', sans-serif;
 }
@@ -395,3 +395,21 @@ p.error {
 #greeting {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+table {
+    font-family: 'Montserrat', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+    /* background-color: #dddddd; */
+  }
