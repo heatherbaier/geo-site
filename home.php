@@ -1,4 +1,6 @@
 <?php include 'includes/home_header.php' ?>
+<?php include 'includes/greeting.php' ?>
+
 
 <?php 
 	session_start();
@@ -8,6 +10,6 @@
 	}
 ?>
 
-<h1>WE IN THE NON-ADMIN PAGE YO</h1>
+<!-- <h1>WE IN THE NON-ADMIN PAGE YO</h1> -->
 
 <?php include 'includes/home_footer.php' ?>
