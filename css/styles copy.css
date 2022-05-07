@@ -362,7 +362,7 @@ p.error {
 
 .grid-container > div {
     background-color: #A37A74;
-    /* border-radius: 10px; */
+    border-radius: 5px;
     text-align: center;
     padding: 20px 0;
     /* font-size: 30px; */
@@ -383,6 +383,7 @@ p.error {
 .grid-container > div > h3 {
     font-size: 15px;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -422,4 +423,51 @@ h1, h2, h3, h4, h5, h6, p, label, input {
 
 div {
     font-family: 'Montserrat', sans-serif; 
+}
+
+
+
+.topic-item1 { grid-area: basic; }
+.topic-item2 { grid-area: spatial; }
+.topic-item3 { grid-area: resource; }
+.topic-item4 { grid-area: perf; }
+.topic-item5 { grid-area: finance; }
+.topic-item6 { grid-area: protected; }
+
+
+.topic-grid-container {
+  display: grid;
+  grid-template-areas:
+    'basic spatial resource'
+    'perf finance protected';    
+  gap: 50px;
+  padding: 150px;
+
+}
+
+.topic-grid-container > div {
+    background-color: #A37A74;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+    /* font-size: 30px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    height: 180px;
+    text-align: center;
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.topic-grid-container > div > .material-symbols-outlined {
+    font-size: 80px;
+    color: white;
+}
+
+.topic-grid-container > div > h3 {
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }

@@ -20,7 +20,6 @@
 		<span class="material-symbols-outlined">account_circle</span>
 		<h3>Think of something lol</h3>
 	</div>	
-
 </div>
 
 <?php include 'includes/home_footer.php' ?>

@@ -24,6 +24,7 @@
                 </div>
                 <div style='float: right; padding-top: 15px; padding-right: 15px;'>
                     <a href='add_user.php'><button >Add User</button></a>
+                    <button type='button' onclick='tableToCSV()'>Download CSV</button>
                 </div>
             </div>";
 
@@ -59,82 +60,6 @@
 
 ?>
 
-<script>
-
-$('.button').click(function () {
-    remove_user(this);
-});
-
-function remove_user(element) {
-
-    console.log(element.id);
-
-    var conf = confirm("Are you sure you want to delete "  + element.id + " from the registered users? This action cannot be undone.")
-
-    if (conf) {
-
-        // document.cookie = "username=" + element.id;
-
-        $.ajax({
-
-            type : "POST",  //type of method
-            url  : "remove_user.php",  //your page
-            data : { username : element.id },// passing the values
-
-            success: function(data){  
-                console.log("done!")
-                alert(data);
-                window.location = "browse_users.php";
-            }
-
-        });
-      }
-}
-
-
-
-
-</script>
-
-
-
-<!-- <table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-</table> -->
-
+<script src="js/browse_users.js"></script>
 
 <?php include 'includes/home_footer.php' ?>

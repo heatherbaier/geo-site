@@ -8,9 +8,9 @@
             <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">     
-            <li><a  class="dash-nav" id="dash-nav-home" href="home.php">Home<span class="material-symbols-outlined dash-icon">dashboard</span></a></li>
+            <li><a href="home.php">Home<span class="material-symbols-outlined dash-icon">dashboard</span></a></li>
             <li ><a  class="dash-nav" id="dash-nav-schools" >School Explorer<span class="material-symbols-outlined dash-icon">school</span></a></li>
-            <li><a  class="dash-nav" id="dash-nav-topics" >Topic Explorer<span class="material-symbols-outlined dash-icon">database</span></a></li>
+            <li><a href="topic_explorer.php">Topic Explorer<span class="material-symbols-outlined dash-icon">database</span></a></li>
             <li><a  class="dash-nav" id="dash-nav-sdg" >SDG Explorer<span class="material-symbols-outlined dash-icon">bar_chart</span></a></li>
             <li><a  class="dash-nav" id="dash-nav-export" >Export Manager<span class="material-symbols-outlined dash-icon">history</span></a></li>
             <li><a  class="dash-nav" id="dash-nav-history" href="download_history.php">Download History<span class="material-symbols-outlined dash-icon">file_download</span></a></li>

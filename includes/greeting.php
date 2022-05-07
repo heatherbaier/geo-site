@@ -9,5 +9,6 @@
     outerdiv.style.float = "left";
     outerdiv.style.marginLeft = "220px";
     outerdiv.id = "greeting";
+    // outerdiv.class = "page-content inset"
     document.getElementById("header-cont").appendChild(outerdiv);
 </script>
