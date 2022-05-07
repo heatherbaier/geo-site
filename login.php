@@ -29,9 +29,9 @@
 
                 $uid = $result['id'];
 
-                $la_updateq = $connection->prepare("UPDATE users_temp SET last_active=:last_active WHERE id=:uid");
+                $la_updateq = $connection->prepare("UPDATE users_temp SET last_active=:last_active WHERE username=:username");
                 $la_updateq->bindParam("last_active", $last_active, PDO::PARAM_STR);
-                $la_updateq->bindParam("uid", $uid, PDO::PARAM_STR);
+                $la_updateq->bindParam("username", $username, PDO::PARAM_STR);
                 $la_result = $la_updateq->execute();
 
                 // echo '<p class="success">Congratulations, you are logged in!</p>';
