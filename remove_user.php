@@ -1,16 +1,5 @@
 <?php
 
-// echo "<h1>we here yo</h1>";
-
-// $result = $_GET['var'];
-// echo $result;
-
-// $data['name'] = "yo bozo";
-// $data['resp'] = $_POST['var'];
-
-
-
-
 session_start();
 
 include('config.php');
@@ -39,7 +28,7 @@ if ($query->rowCount() != 0) {
 
 }
 
-
-
-
 ?>
+
+
+

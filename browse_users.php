@@ -13,7 +13,19 @@
 
     $result = mysqli_query($con, "SELECT username, email, name, role, bio, register_date, last_active FROM users_temp");
 
-    echo "<h2 style='font-family: 'Montserrat', sans-serif;'>Registered Users:</h2>";
+    // echo "<h2 style='font-family: 'Montserrat', sans-serif;'>Registered Users:</h2>";
+
+    echo "<div id='table-div'>
+            <div id='above-table' style='width: 100%; height: 100px; display: inline;'>
+                <div style='float: left;'>
+                    <h2 style='padding: 0px; font-family: Montserrat; font-weight: 200px;'>
+                        Registerd Users
+                    </h2>
+                </div>
+                <div style='float: right; padding-top: 15px; padding-right: 15px;'>
+                    <a href='add_user.php'><button >Add User</button></a>
+                </div>
+            </div>";
 
     echo "<table border='1'>
     <tr>
@@ -43,7 +55,7 @@
     
     echo "</tr>";
     }
-    echo "</table>";
+    echo "</table></div>";
 
 ?>
 
@@ -77,9 +89,6 @@ function remove_user(element) {
 
         });
       }
-
-
-
 }
 
 

@@ -400,16 +400,26 @@ p.error {
 table {
     font-family: 'Montserrat', sans-serif;
     border-collapse: collapse;
-    width: 100%;
-  }
+    width: 99%;
+}
   
-  td, th {
+td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
+    font-weight: bolder;
+}
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: white;
     /* background-color: #dddddd; */
-  }
+}
+
+
+h1, h2, h3, h4, h5, h6, p, label, input {
+    font-family: 'Montserrat', sans-serif;
+}
+
+div {
+    font-family: 'Montserrat', sans-serif; 
+}
