@@ -1,4 +1,5 @@
 <?php
+
     define('USER', 'master');
     define('PASSWORD', 'geo2022!');
     define('HOST', 'a2nlmysql39plsk.secureserver.net:3306');

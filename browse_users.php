@@ -28,18 +28,21 @@
                 </div>
             </div>";
 
-    echo "<table border='1'>
-    <tr>
-    <th>Username</th>
-    <th>Email</th>
-    <th>Name</th>
-    <th>Role</th>
-    <th>Data Use Statement</th>
-    <th>Date Registered</th>
-    <th>Last Active Date</th>
-    <th>Delete</th>
-
-    </tr>";
+    echo "<table id='myTable'  class='display' border='1'>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Data Use Statement</th>
+            <th>Date Registered</th>
+            <th>Last Active Date</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    
+    <tbody>";
     
     while($row = mysqli_fetch_array($result))
     {
@@ -56,10 +59,22 @@
     
     echo "</tr>";
     }
-    echo "</table></div>";
+    echo "</tbody></table></div>";
 
 ?>
 
 <script src="js/browse_users.js"></script>
+
+<script>
+
+// $(document).ready(function() { 
+//     $("#myTable").tablesorter() 
+// }); 
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+
+</script>
 
 <?php include 'includes/home_footer.php' ?>

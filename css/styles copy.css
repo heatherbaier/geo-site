@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     /* width: 100%; */
     height: 100%;
+    width: 100%;
     /* position: absolute; */
     overflow: hidden;
     /* background-color: #BFC5D9; */
@@ -41,7 +42,6 @@ html, body {
     font-size: 12pt;
     right: 20px;
     z-index: 4; 
-
 }
 
 .dropdown-content a {
@@ -470,4 +470,23 @@ div {
     font-size: 15px;
     color: white;
     font-family: 'Montserrat', sans-serif;
+}
+
+#mapid {
+    z-index: 1;
+    width: 100%;
+    height: 100%; 
+    background-color: #d4dadc;
+}
+
+#header-cont {
+    position: relative;
+    z-index: 4;
+}
+
+.map-wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
 }

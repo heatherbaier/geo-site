@@ -8,9 +8,9 @@
 		<span style="text-align: center" class="material-symbols-outlined">edit</span>
 		<h3>Edit blogs</h3>
 	</div>
-	<div class="item2 admin-button" onclick="window.location='add_user.php'">
-		<span class="material-symbols-outlined">group_add</span>
-		<h3>Add a user</h3>
+	<div class="item2 admin-button" onclick="window.location='admin_profile.php'">
+		<span class="material-symbols-outlined">person</span>
+		<h3>Edit Profile</h3>
 	</div>
 	<div class="item3 admin-button" onclick="window.location='browse_users.php'">
 		<span class="material-symbols-outlined">group</span>

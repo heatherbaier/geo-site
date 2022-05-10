@@ -15,10 +15,30 @@
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-	<!-- <link href= type="text/javascript"> -->
-	<!-- <script src="js/logout.js"></script> -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+	<link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+	<script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+	<!-- choose a theme file -->
+	<!-- load jQuery and tablesorter scripts -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+
+	<!-- tablesorter widgets (optional) -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.widgets.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/extras/jquery.tablesorter.pager.min.js"></script>
+
 
 	
+
+
+
+
+
+
 </head>
 
 
@@ -29,7 +49,7 @@
 			<div class="dropdown-content">
 				<a href="index.php">Home</a>
 				<a href="#">About</a>
-				<a href="#">School Map</a>
+				<a href="school_map.php">School Map</a>
 
 				<?php 
 					session_start();

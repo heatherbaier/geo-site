@@ -26,6 +26,7 @@
                 $_SESSION['user_id'] = $result['id'];
                 $_SESSION['user_name'] = $result['name'];
 				        $_SESSION['role'] = $result['role'];
+                $_SESSION['username'] = $username;
 
                 $uid = $result['id'];
 

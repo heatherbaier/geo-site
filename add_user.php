@@ -10,10 +10,15 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $prole = $_POST['role'];
+        $prole = "Admin";
         $bio = $_POST['bio'];
         $pname = $_POST['name'];
         $rtime = date("Y/m/d h:i:sa");
+
+        $pbio = $_POST['bio'];
+        $ppronouns = $_POST['pronouns'];
+        $pgradyear = $_POST['gradyear'];
+        $plinkedin = $_POST['linkedin'];
 
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
         $query = $connection->prepare("SELECT * FROM users_temp WHERE email=:email");
@@ -26,8 +31,8 @@
 
         if ($query->rowCount() == 0) {
 
+            // Add to general users table
             $query = $connection->prepare("INSERT INTO users_temp(username,password,email,name,role,bio,register_date) VALUES (:username,:password_hash,:email,:pname,:prole,:bio,:rtime)");
-
             $query->bindParam("username", $username, PDO::PARAM_STR);
             $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
             $query->bindParam("email", $email, PDO::PARAM_STR);
@@ -35,14 +40,32 @@
             $query->bindParam("bio", $bio, PDO::PARAM_STR);
             $query->bindParam("prole", $prole, PDO::PARAM_STR);
             $query->bindParam("rtime", $rtime, PDO::PARAM_STR);
-
             $result = $query->execute();
+
             if ($result) {
-                echo '<p class="success">User added successsfully!</p>';
+                echo '<p class="success">User added successsfully to user table!</p>';
                 // exit;
             } else {
                 echo '<p class="error">Something went wrong!</p>';
             }
+
+            // Add to Admin table
+            $query = $connection->prepare("INSERT INTO admin_profiles(name,pronouns,gradyear,linkedin,bio,username) VALUES (:pname,:ppronouns,:pgradyear,:plinkedin,:pbio,:username)");
+            $query->bindParam("pname", $pname, PDO::PARAM_STR);
+            $query->bindParam("ppronouns", $ppronouns, PDO::PARAM_STR);
+            $query->bindParam("pgradyear", $pgradyear, PDO::PARAM_STR);
+            $query->bindParam("plinkedin", $plinkedin, PDO::PARAM_STR);
+            $query->bindParam("pbio", $pbio, PDO::PARAM_STR);
+            $query->bindParam("username", $username, PDO::PARAM_STR);
+            $result = $query->execute();
+
+            if ($result) {
+                echo '<p class="success">User added successsfully to Admin table!</p>';
+                // exit;
+            } else {
+                echo '<p class="error">Something went wrong!</p>';
+            }
+
         }
     }
 ?>
@@ -67,17 +90,19 @@
             <input type="password" name="password" required />
         </div>    
         <div class="form-element">
-            <label for="role">Role</label>
-            <select id="role" name="role">
-                <option value="Researcher/Academia">Researcher/Academia</option>
-                <option value="Industry Professional">Industry Professional</option>
-                <option value="Parent">Parent</option>
-                <option value="Admin">Admin</option>
-            </select>
-
+            <label>Pronouns</label>
+            <input type="text" name="pronouns" required />
         </div>
         <div class="form-element">
-            <label style="font-size: 20px;">What is this user planning to using GEO's data for?</label>
+            <label>Graduation Year</label>
+            <input type="text" name="gradyear" required />
+        </div>
+        <div class="form-element">
+            <label>LinkedIn</label>
+            <input type="text" name="linkedin" required />
+        </div>    
+        <div class="form-element">
+            <label>Bio</label>
             <input type="text" name="bio" required />
         </div>
         <button type="submit" name="register" value="register">Register</button>
