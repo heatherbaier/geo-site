@@ -51,7 +51,46 @@ cursor: pointer;
 			 		
 			  	</div>
 
-<table class="table table-striped table-class" id= "table-id">
+
+
+<?php
+
+session_start();
+
+include('config.php');
+
+// $result = mysqli_query($con, "SELECT geo_id, longitude, latitude FROM `spatial` WHERE geo_id IN ('NIG-000000','NIG-000001', 'NIG-000002', 'NIG-000003', 'NIG-000004', 'NIG-000005', 'NIG-000006')");
+
+$result = mysqli_query($con, "SELECT geo_id, longitude, latitude FROM `spatial` WHERE geo_id LIKE 'BHR%'");
+
+// echo "<h2 style='font-family: 'Montserrat', sans-serif;'>Registered Users:</h2>";
+
+
+echo "<table class='table table-striped table-class' id='table-id' style='overflow: visible'>
+<thead>
+    <tr>
+        <th>GEO ID</th>
+        <th>Longitude</th>
+        <th>Latitude</th>
+    </tr>
+</thead>
+
+<tbody>";
+
+while($row = mysqli_fetch_array($result))
+{
+$uname = $row['username'];
+echo "<tr>";
+    echo "<td>" . $row['geo_id'] . "</td>";
+    echo "<td>" . $row['longitude'] . "</td>";
+    echo "<td>" . $row['latitude'] . "</td>";
+echo "</tr>";
+}
+echo "</tbody></table>";
+
+?>
+
+<!-- <table class="table table-striped table-class" id= "table-id">
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
@@ -664,7 +703,7 @@ cursor: pointer;
 		<td>1-626-851-7695</td>
 		<td>Feb 23, 2016</td>
 	</tr>
-</table>
+</table> -->
 
 <!--		Start Pagination -->
 			<div class='pagination-container' >

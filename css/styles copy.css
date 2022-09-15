@@ -435,6 +435,7 @@ div {
 .topic-item6 { grid-area: protected; }
 
 
+
 .topic-grid-container {
   display: grid;
   grid-template-areas:
@@ -442,7 +443,6 @@ div {
     'perf finance protected';    
   gap: 50px;
   padding: 150px;
-
 }
 
 .topic-grid-container > div {
