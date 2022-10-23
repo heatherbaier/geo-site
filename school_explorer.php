@@ -61,7 +61,7 @@ include('config.php');
 
 // $result = mysqli_query($con, "SELECT geo_id, longitude, latitude FROM `spatial` WHERE geo_id IN ('NIG-000000','NIG-000001', 'NIG-000002', 'NIG-000003', 'NIG-000004', 'NIG-000005', 'NIG-000006')");
 
-$result = mysqli_query($con, "SELECT geo_id, longitude, latitude FROM `spatial` WHERE geo_id LIKE 'BHR%'");
+$result = mysqli_query($con, "SELECT geo_id, school_name, adm0, adm1, adm2, adm3 FROM `ids`");
 
 // echo "<h2 style='font-family: 'Montserrat', sans-serif;'>Registered Users:</h2>";
 
@@ -70,8 +70,11 @@ echo "<table class='table table-striped table-class' id='table-id' style='overfl
 <thead>
     <tr>
         <th>GEO ID</th>
-        <th>Longitude</th>
-        <th>Latitude</th>
+        <th>School Name</th>
+        <th>Country</th>
+        <th>ADM1</th>
+        <th>ADM2</th>
+        <th>ADM3</th>
     </tr>
 </thead>
 
@@ -82,8 +85,11 @@ while($row = mysqli_fetch_array($result))
 $uname = $row['username'];
 echo "<tr>";
     echo "<td>" . $row['geo_id'] . "</td>";
-    echo "<td>" . $row['longitude'] . "</td>";
-    echo "<td>" . $row['latitude'] . "</td>";
+    echo "<td>" . $row['school_name'] . "</td>";
+    echo "<td>" . $row['adm0'] . "</td>";
+	echo "<td>" . $row['adm1'] . "</td>";
+	echo "<td>" . $row['adm2'] . "</td>";
+	echo "<td>" . $row['adm3'] . "</td>";
 echo "</tr>";
 }
 echo "</tbody></table>";
