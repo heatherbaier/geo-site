@@ -1,0 +1,162 @@
+
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    /* width: 100%; */
+
+    background-color: #C3B59F;
+    justify-content: center;
+
+}
+
+#landingPage{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #4a7584;
+    color: #C3B59F;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#optionsHomePageContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+.columnHomePage{  
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    margin: 2%;
+    height: 100%;
+}
+.section{
+    width:100%;
+    padding: 4%;
+}
+
+.pageButton{
+    width:100%;
+    margin-bottom: 2%;
+    text-align: center;
+    background-color: #668F80;
+    color: #C3B59F;
+    border-radius: 10px;
+    border: 2px solid #668F80;
+    font-size: 20px;
+
+}
+
+.pageDescription{
+    width: 100%;
+    text-align: center;
+    background-color: #A0AF84;
+    color: #00241B;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 15px;
+}
+
+#schoolMapButtonBox{
+    width:100%;
+    margin: 5%;
+    margin-top: 100%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 2px solid #668F80;
+    background-color: #668F80;
+    color: #C3B59F;
+    font-size: 35px;
+
+}
+
+
+.header-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #C3B59F;
+}
+
+.headerimg{
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+    margin: 1%;
+    padding: 0px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 2%;
+}
+
+#titleGEO{
+    font-size: 70px;
+    color:#00241B;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height:10%;
+    margin: 2%;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    color: #00241B;
+    height: 100px;
+    width: 100px;
+    background-color: #C3B59F
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    white-space: wrap;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-size: 12pt;
+    right: 20px;
+    z-index: 4; 
+}
+
+.dropdown-content a {
+    color: #355264;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #A0AF84;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: none;
+}
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 1,
+'wght' 700,
+'GRAD' 200,
+'opsz' 48
+}

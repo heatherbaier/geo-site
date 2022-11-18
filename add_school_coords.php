@@ -11,7 +11,9 @@ include('config.php');
 // $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
-$result = mysqli_query($con, "SELECT * FROM `spatial`");
+//$result = mysqli_query($con, "SELECT * FROM `spatial`");
+$resultNIG = mysqli_query($con, "SELECT * FROM `spatial` LIMIT 1000 OFFSET 0");
+
 
 
 // $query->execute();
@@ -21,8 +23,8 @@ $result = mysqli_query($con, "SELECT * FROM `spatial`");
 // // $query->bindParam("username", $username, PDO::PARAM_STR);
 // // $result = $query->execute();
 
-if ($result) {
-    echo json_encode(mysqli_fetch_all($result));
+if ($resultNIG) {
+    echo json_encode(mysqli_fetch_all($resultNIG));
     exit;   
 } else {
     echo json_encode("Bad!");

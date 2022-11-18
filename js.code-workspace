@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "js"
+		},
+		{
+			"path": "includes"
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "assets"
+		}
+	]
+}
