@@ -5,7 +5,7 @@
 
 <div id='landingPage'>
 
-<h2 id="missionstatement">The mission statement goes here! Right now, this is filler text.</h2>
+<h2 id="missionStatement">The mission statement goes here! Right now, this is filler text.</h2>
 
 <div id ="optionsHomePageContent">
     <div class="columnHomePage">

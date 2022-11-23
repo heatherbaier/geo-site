@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link href="css/home.css" rel="stylesheet">
+	<link href="css/aboutus.css" rel="stylesheet">
 	<title>Global Education Observatory</title>
 	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +36,10 @@
 
 <body>
 	<div class="header-cont">
-		<img class = 'headerimg' src = "assets/geoLogocolor__2_-removebg-preview.png">
+		<img class = 'headerimg' src = "assets/geoLogocolor__2_-removebg-preview.png" style = "width:80px; height:62px;">
 
 		<div class = "title">
-			<h1 id = 'titleGEO' > Global Educational Observatory </h1>
+			<h1 id = 'titleAboutUs' > About Us </h1>
 		</div>
 
 		<div class="dropdown">

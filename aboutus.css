@@ -1,5 +1,4 @@
 
-
 html, body {
     margin: 0px;
     padding: 0px;
@@ -10,7 +9,7 @@ html, body {
 
 }
 
-#landingPage{
+#aboutUsPage{
     display:flex;
     flex-direction: column;
     width: 100%;
@@ -20,68 +19,6 @@ html, body {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#missionStatement{
-    margin-left:3%;
-    font-size: 40px;
-}
-
-#optionsHomePageContent{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: center;
-}
-.columnHomePage{  
-    display: flex;
-    flex-direction: column;
-    width: 29%;
-    margin: 2%;
-    height: 100%;
-}
-.section{
-    width:100%;
-    padding: 4%;
-}
-
-.pageButton{
-    width:100%;
-    margin-bottom: 2%;
-    text-align: center;
-    background-color: #668F80;
-    color: #C3B59F;
-    border-radius: 10px;
-    border: 2px solid #668F80;
-    font-size: 30px;
-
-}
-
-.pageDescription{
-    width: 100%;
-    text-align: center;
-    background-color: #A0AF84;
-    color: #00241B;
-    margin-bottom: 0%;
-    border-radius: 10px;
-    padding: 1%;
-    font-size: 20px;
-}
-
-#schoolMapButtonBox{
-    width:100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 180%;
-    padding: 1%;
-    border-radius: 10px;
-    border: 2px solid #668F80;
-    background-color: #668F80;
-    color: #C3B59F;
-    font-size: 35px;
-
-}
-
-
 .header-cont {
     display: flex;
     flex-direction: row;
@@ -89,17 +26,16 @@ html, body {
     width: 100%;
     justify-content: center;
     background-color: #C3B59F;
-    height:10%;
+    height:80px;
 }
 
 .headerimg{
     display: flex;
     flex-direction: column;
-    width: 125px;
-    height: 100px;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    margin-left: 1%;
+    width: 8%;
+    margin-left: 5px;
+    margin-top: 9px;
+    padding: 0px;
 }
 
 .title{
@@ -109,14 +45,105 @@ html, body {
     margin: 2%;
 }
 
-#titleGEO{
-    font-size: 500%;
-    margin-top: 1%;
-    margin-left: 1%;
-    display:flex;
+#titleAboutUs{
+    font-size: 60px;
+    margin-top:-20px;
     color:#00241B;
 }
 
+#aboutPageHeader{
+    margin-left: 3%;
+    font-size:40px;
+}
+
+/*bios styling*/
+#heatherSection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#heatherDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#janeSection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#janeDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#naomiSection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#naomiDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#courtneySection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#courtneyDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#annamarieSection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#annamarieDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#kaitlynSection{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+#kaitlynDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutHeaders{
+    background-color:#668F80;
+    color: #C3B59F;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    margin-right:7%;
+    text-align:center;
+    font-size: 27px;
+    padding-top: 1.0%;
+    padding-bottom: 1.0%;
+}
+
+.aboutDescriptions{
+    background-color: #A0AF84;
+    color: #00241B;
+    font-size: 20px;
+    padding: 1%;
+    margin-right:7%;
+    text-align:center;
+}
+
+.aboutPictures{
+    width: 25%;
+    height: 25%;
+    margin-left: 4%;
+    margin-right: 3%;
+}
 
 /*dropdown button styling*/
 
