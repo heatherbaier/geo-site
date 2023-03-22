@@ -1,15 +1,15 @@
 getPagination('#table-id');
-					//getPagination('.table-class');
-					//getPagination('table');
+					getPagination('.table-class');
+					getPagination('table');
 
-		  /*					PAGINATION 
-		  - on change max rows select options fade out all rows gt option value mx = 5
-		  - append pagination list as per numbers of rows / max rows option (20row/5= 4pages )
+		/*					PAGINATION 
+		- on change max rows select options fade out all rows gt option value mx = 5
+		- append pagination list as per numbers of rows / max rows option (20row/5= 4pages )
 		  - each pagination li on click -> fade out all tr gt max rows * li num and (5*pagenum 2 = 10 rows)
 		  - fade out all tr lt max rows * li num - max rows ((5*pagenum 2 = 10) - 5)
-		  - fade in all tr between (maxRows*PageNum) and (maxRows*pageNum)- MaxRows 
+		- fade in all tr between (maxRows*PageNum) and (maxRows*pageNum)- MaxRows 
 		  */
-		 
+	
 
 function getPagination(table) {
   var lastPage = 1;
@@ -18,7 +18,7 @@ function getPagination(table) {
     .on('change', function(evt) {
       //$('.paginationprev').html('');						// reset pagination
 
-     lastPage = 1;
+    lastPage = 1;
       $('.pagination')
         .find('li')
         .slice(1, -1)
@@ -56,7 +56,7 @@ function getPagination(table) {
               '<li data-page="' +
                 i +
                 '">\
-								  <span>' +
+								<span>' +
                 i++ +
                 '<span class="sr-only">(current)</span></span>\
 								</li>'
@@ -91,7 +91,7 @@ function getPagination(table) {
         $('.pagination li').removeClass('active'); // remove active class from all li
         $('.pagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked
         // $(this).addClass('active');					// add active class to the clicked
-	  	limitPagging();
+limitPagging();
         $(table + ' tr:gt(0)').each(function() {
           // each tr in table not the header
           trIndex++; // tr index counter
@@ -106,7 +106,7 @@ function getPagination(table) {
           } //else fade in
         }); // end of for each tr in table
       }); // end of on click pagination list
-	  limitPagging();
+	limitPagging();
     })
     .val(5)
     .change();

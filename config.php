@@ -1,7 +1,7 @@
 <?php
 
-    define('USER', 'master');
-    define('PASSWORD', 'geo2022!');
+    define('USER', 'cbmaynard');
+    define('PASSWORD', 'Redsoxfan1');
     define('HOST', 'a2nlmysql39plsk.secureserver.net:3306');
     define('DATABASE', 'geoSite');
     try {
@@ -14,4 +14,5 @@
 
     $con = mysqli_connect(HOST,USER,PASSWORD,DATABASE);
 
+    #
 ?>

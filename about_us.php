@@ -12,15 +12,25 @@
             <p class = "aboutDescriptions"> 
                 filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text filler text 
             </p>
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
+            </p>
         </div>
     </div>
 
     <div class = "personalSection">
-        <img class = "aboutPictures" src = "assets/fillerpic.png">
+        <img class = "aboutPictures" src = "assets/DSC02226.JPG">
         <div class = "personalDescription"">
             <h6 class = "aboutHeaders"> Jane Siwek, W&M 2023, CAMS Mathematical Biology </h6>
             <p class = "aboutDescriptions"> 
             Jane Siwek is one of the student co-directors for GEO and is an undergraduate student graduating from W&M in May 2023 with a degree in Computational & Applied Mathematics & Statistics, concentrating in Mathematical Biology. Previously, she used deep learning models to predict school scores using satellite imagery and analyzed education data, and currently she is geocoding for school coordinates. Her other research interests include using natural language processing and machine learning to analyze mutations in protein-protein interactions.
+            </p>
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
             </p>
         </div>
     </div>
@@ -32,36 +42,56 @@
             <p class = "aboutDescriptions"> 
             Naomi Levin cleans data for GEO and is pursuing a B.S. in biology as a pre-med student who will graduate from W&M in May 2023. Aside from her research with geoLab, Naomi’s research interests include kinesthetics related to osseointegration and limb salvage/amputation. 
             </p>
-        </div>
-    </div>
-
-    <div class = "personalSection">
-        <img class = "aboutPictures" src = "assets/fillerpic.png">
-        <div class = "personalDescription">
-            <h6 class = "aboutHeaders"> Courtney Maynard, W&M 2025, Data Science </h6>
-            <p class = "aboutDescriptions">
-            Courtney Maynard coded and maintains the map of schools for the GEO website. Additionally, she built the “Home” and “About Us” pages. She is a James Monroe Scholar graduating in May 2025 with a major in Data Science and a minor in Psychology. Her research interests outside of the geoLab include analyzing the concurrent appearance of emotion with sensemaking about data, as seen through elementary school students’ exploration of data science, as well as ethical data collection, usage, and publication. 
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
             </p>
         </div>
     </div>
 
     <div class = "personalSection">
-        <img class = "aboutPictures" src = "assets/fillerpic.png">
+        <img class = "aboutPictures" src = "assets/DSC02200 2.JPG">
+        <div class = "personalDescription">
+            <h6 class = "aboutHeaders"> Courtney Maynard, W&M 2025, Data Science </h6>
+            <p class = "aboutDescriptions">
+            Courtney Maynard coded and maintains the map of schools for the GEO website. Additionally, she built the “Home” and “About Us” pages. She is a James Monroe Scholar graduating in May 2025 with a major in Data Science and a minor in Psychology. Her research interests outside of the geoLab include analyzing the concurrent appearance of emotion with sensemaking about data, as seen through elementary school students’ exploration of data science, as well as ethical data collection, usage, and publication. 
+            </p>
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
+            </p>
+        </div>
+    </div>
+
+    <div class = "personalSection">
+        <img class = "aboutPictures" src = "assets/DSC02213.JPG">
         <div class = "personalDescription">
             <h6 class = "aboutHeaders"> Annamarie Warnke, W&M 2025, Data Science </h6>
             <p class = "aboutDescriptions">
             Annamarie Warnke writes blog posts for GEO. They are an undergraduate James Monroe Scholar graduating from W&M in May 2025. They are a Data Science major and intended Educational Studies minor. Their other research interests include higher education policy and K-12 data science and computer science education. 
             </p>  
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
+            </p>
         </div>
     </div>
 
     <div class = "personalSection">
-        <img class = "aboutPictures" src = "assets/fillerpic.png">
+        <img class = "aboutPictures" src = "assets/IMG_1059.jpg">
         <div class = "personalDescription">
             <h6 class = "aboutHeaders"> Kaitlyn Wilson, W&M 2023, Data Science and Government </h6>
             <p class = "aboutDescriptions">
-            Kaitlyn Wilson collects education data and creates data visualizations for GEO. She is an undergraduate student graduating from W&M in May 2023 with majors in Data Science and Government. 
+            Kaitlyn Wilson collects education data and creates data visualizations for GEO. She is an undergraduate student graduating from W&M in May 2023 with majors in Data Science and Government. Previously, she worked in the geoParsing section of geoLab, first as a data collector sourcing qualitative data for Chinese Belt and Road Initiative projects in Latin America, then as a Satellite Imagery Specialist tracking Industrial Parks in mainland China (specifically Beijing and Shenzhen) and creating imagery for publication in collaboration with the National Geospatial-Intelligence Agency.
             </p>  
+            <p class = "aboutContacts">
+                LinkedIn:
+                <br></br>
+                Email:
+            </p>
         </div>
     </div>
 

@@ -1,5 +1,4 @@
 <?php include 'includes/home_header.php' ?>
-<?php include 'includes/admin_check.php' ?>
 
 
 <style>
