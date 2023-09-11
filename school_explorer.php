@@ -115,7 +115,7 @@ th:first-child {     display:none; }
 <div id = "selectionForm">
 <form name = "form" action="" method="post">
 	<br></br>
-    Country contains: <p></p> 
+    CountryTEST contains: <p></p> 
 	<input name="geo_id_input" class = 'searchBox' value=""/> <br></br>
 	Country Code contains:  <p></p> 
 	<input name="adm0_input"  class = 'searchBox' value=""/> <br></br>
@@ -125,7 +125,9 @@ th:first-child {     display:none; }
 	<input name="adm2_input"  class = 'searchBox' value=""/> <br></br>
 	School Name contains:  <p></p> 
 	<input name="school_name_input"  class = 'searchBox' value=""/> <br></br>
+
 	<input type = "submit" id = 'searchButton' value = "Search!"/>
+
 </form>
 
 
@@ -133,10 +135,12 @@ th:first-child {     display:none; }
 <h6 id = "selectStatement" >Select Number Of Visible Entries</h2>
 		<div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
 			<select class  ="form-control" name="state" id="maxRows">
-				<option value="5">5</option>
-				<option value="10">10</option>
-				<option value="50">50</option>
+				<option value="5"></option>
 				<option value="100">100</option>
+				<option value="200">200</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
 				<option value="1000">1000</option>
 			</select>	
 		</div>
@@ -173,8 +177,23 @@ include('config.php');
 	$adm1_id_value = $_POST['adm1_input'];
 	$adm2_id_value = $_POST['adm2_input'];
 
-	$resultRequest = mysqli_query($con, "SELECT * FROM `ids` WHERE school_name LIKE '%$school_name_value%' AND geo_id LIKE '%$geo_id_value%' AND adm0 LIKE '%$adm0_id_value%' AND adm1 LIKE '%$adm1_id_value%' AND adm2 LIKE '%$adm2_id_value%' LIMIT 10000");
-	$resultCoords = mysqli_query($con, "SELECT * FROM `spatial` WHERE geo_id LIKE '%$geo_id_value_two%'");
+	// if(isset($_GET['page']))
+    // {
+    //     $page = $_GET['page'];
+    // }
+    // else
+    // {
+    //     $page = 1;
+    // }
+
+    // $num_per_page = 1000;
+    // $start_from = ($page-1)*1000;
+    
+    //$result = mysqli_query($con, "SELECT * FROM `ids` WHERE school_name LIKE '%$school_name_value%' AND geo_id LIKE '%$geo_id_value%' AND adm0 LIKE '%$adm0_id_value%' AND adm1 LIKE '%$adm1_id_value%' AND adm2 LIKE '%$adm2_id_value%' LIMIT $start_from";);
+
+
+	$resultRequest = mysqli_query($con, "SELECT * FROM `ids` WHERE school_name LIKE '%$school_name_value%' AND geo_id LIKE '%$geo_id_value%' AND adm0 LIKE '%$adm0_id_value%' AND adm1 LIKE '%$adm1_id_value%' AND adm2 LIKE '%$adm2_id_value%' LIMIT 10000 ");
+	$resultCoords = mysqli_query($con, "SELECT * FROM `coordinates` WHERE geo_id LIKE '%$geo_id_value_two%'");
 	echo "<br><br>";
 
 	echo "<table class='table table-striped table-class' id='table-id' style='overflow: visible'>
@@ -194,7 +213,6 @@ include('config.php');
 	
 	
 	while(
-	
 		$row = mysqli_fetch_array($resultRequest)
 	
 	){
@@ -212,6 +230,33 @@ include('config.php');
 	
 	echo "</tbody></table>";
 
+
+        
+	// $pr_query = "SELECT * FROM `ids` WHERE school_name LIKE '%$school_name_value%' AND geo_id LIKE '%$geo_id_value%' AND adm0 LIKE '%$adm0_id_value%' AND adm1 LIKE '%$adm1_id_value%' AND adm2 LIKE '%$adm2_id_value%'";
+	// $pr_result = mysqli_query($con,$pr_query);
+	// $total_record = mysqli_num_rows($pr_result);
+	
+	// $total_page = ceil(40000/$num_per_page);
+
+	// if($page>1)
+	// {
+	// 	echo "<a href='school_explorer.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
+	// }
+
+	
+	// for($i=1;$i<$total_page;$i++)
+	// {
+	// 	echo "<a href='school_explorer.php?page=".$i."' class='btn btn-primary'>$i</a>";
+	// }
+
+	// if($i>$page)
+	// {
+	// 	echo "<a href='school_explorer.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
+	// }
+    
+
+    
+
 ?>
 
 <button id = 'downloadButton' onclick="exportTableToCSV('GEOselecteddata.csv')">Export Selected Entries to CSV File</button>
@@ -219,6 +264,7 @@ include('config.php');
 <div id="map" style="width: 600px; height: 400px;"></div>
 
 </div> <!-- end of table contents column -->
+
 </div> <!-- 		End of Container -->
 
 
@@ -228,37 +274,16 @@ function saveId(savingId){
 	var idSaved;
 	idSaved = savingId.id;
 
-
-	/*var temp, item, a, i;
-	temp = document.getElementsByTagName("template")[0];
-  	//get the div element from the template:
-	itemSchool = temp.content.querySelector("h1");
-	itemMap = temp.content.querySelector("h2");
-
-    //Create a new node, based on the template:
-	a = document.importNode(itemSchool, true);
-
-	elem = document.getElementById(idSaved);
-	a.textContent += elem.innerText;
-
-    //append the new node wherever you like:
-
-	document.getElementById('seeMoreInfoPlace').appendChild(a);
-
-	b = document.importNode(itemMap, true)
-	elem2 = document.getElementById(idSaved);
-	b.textContent += elem2.innerText;
-	document.getElementById('seeMoreInfoPlace').appendChild(b);
-	*/
-
 	window.location.href = "coordinfo.php?idSaved=" + idSaved;
 	exit;
-	}
+}
+
+
+
 </script>
 
 <script src="js/pagination.js"></script>
 
 
-<!--  Developed By Yasser Mas -->
 
 <?php include 'includes/home_footer.php' ?>

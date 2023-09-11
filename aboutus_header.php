@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link href="css/aboutuscolorswitch.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
 	<title>Global Education Observatory</title>
 	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,29 +36,24 @@
 
 <body>
 	<div class="header-cont">
-		<img class = 'headerimg' src = "assets/geoLogocolor (3).png" style = "width:80px; height:62px;">
+		<img class = 'headerimg' src = "assets/geoLogocolor__2_-removebg-preview.png" style = "width:100px; height:75px;">
 
 		<div class = "title">
 			<h1 id = 'titleAboutUs' > About Us </h1>
-			<h1 id = 'smalltitleGEO' > <a class = 'smalltitlelinks' href="home.php">Global Educational Observatory</a> by the <a class = 'smalltitlelinks' href="https://geolab.wm.edu/">William & Mary geoLab</a></h1>
 		</div>
 
-		<div class="hamburger-menu">
-			<input id="menu__toggle" type="checkbox" />
-			<label class="menu__btn" for="menu__toggle">
-				<span></span>
-			</label>
-
-			<ul class="menu__box">
-				<li><a class="menu__item" href="home.php">Home</a></li>
-				<li><a class="menu__item" href="school_explorer.php">School Explorer</a></li>
-				<li><a class="menu__item" href="sdg_explorer.php">Sustainable Development Goals Explorer</a></li>
-				<li><a class="menu__item" href="topic_explorer.php">Topic Explorer</a><li>
-				<li><a class="menu__item" href="school_map.php">School Map</a></li>
-				<li><a class="menu__item" href="statements.php">Statements of Context, Ethics, and Accountability</a><li>
-				<li><a class="menu__item" href="export_download.php">Blogs and Posts</a></li>
-				<li><a class="menu__item" href="about_us.php">About Us</a></li>
-			</ul>
+		<div class="dropdown">
+			<button class="dropbtn"><span class="material-symbols-outlined"> density_small </span></button>
+			<div class="dropdown-content">
+				<a href="home.php">Home</a>
+				<a href="school_explorer.php">School Explorer</a>
+				<a href="sdg_explorer.php">SDG Explorer</a>
+				<a href="topic_explorer.php">Topic Explorer</a>
+				<a href="school_map.php">School Map</a>
+				<a href="export_download.php">Export and Download</a>
+				<a href="statements.php">Statements of E,C,A</a>
+				<a href="about_us.php">About Us</a>
+			</div>
 		</div>
 	</div>
 

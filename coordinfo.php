@@ -86,7 +86,7 @@ if ( ! empty( $_GET['idSaved'] ) ) {
 }  
 
 
-$resultCoords = mysqli_query($con, "SELECT * FROM `spatial` WHERE geo_id LIKE '$idSavedFrom'");
+$resultCoords = mysqli_query($con, "SELECT * FROM `coordinates` WHERE geo_id LIKE '$idSavedFrom'");
 $resultInfo = mysqli_query($con, "SELECT * FROM `ids` WHERE geo_id LIKE '$idSavedFrom' LIMIT 1");
 
 echo "<table class='table table-striped table-class' id='coord-table-id' style='overflow: visible'>
