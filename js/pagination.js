@@ -2,14 +2,14 @@ getPagination('#table-id');
 					//getPagination('.table-class');
 					//getPagination('table');
 
-		  /*					PAGINATION 
-		  - on change max rows select options fade out all rows gt option value mx = 5
-		  - append pagination list as per numbers of rows / max rows option (20row/5= 4pages )
+		/*					PAGINATION 
+		- on change max rows select options fade out all rows gt option value mx = 5
+		- append pagination list as per numbers of rows / max rows option (20row/5= 4pages )
 		  - each pagination li on click -> fade out all tr gt max rows * li num and (5*pagenum 2 = 10 rows)
 		  - fade out all tr lt max rows * li num - max rows ((5*pagenum 2 = 10) - 5)
-		  - fade in all tr between (maxRows*PageNum) and (maxRows*pageNum)- MaxRows 
+		- fade in all tr between (maxRows*PageNum) and (maxRows*pageNum)- MaxRows 
 		  */
-		 
+	
 
 function getPagination(table) {
   var lastPage = 1;
@@ -18,7 +18,7 @@ function getPagination(table) {
     .on('change', function(evt) {
       //$('.paginationprev').html('');						// reset pagination
 
-     lastPage = 1;
+    lastPage = 1;
       $('.pagination')
         .find('li')
         .slice(1, -1)
@@ -26,7 +26,7 @@ function getPagination(table) {
       var trnum = 0; // reset tr counter
       var maxRows = parseInt($(this).val()); // get Max Rows from select option
 
-      if (maxRows == 5000) {
+      if (maxRows > totalRows) {
         $('.pagination').hide();
       } else {
         $('.pagination').show();
@@ -44,7 +44,7 @@ function getPagination(table) {
         if (trnum <= maxRows) {
           $(this).show();
         } // else fade in Important in case if it ..
-      }); //  was fade out to fade it in
+      }); //  was fade out to fade it in*/
       if (totalRows > maxRows) {
         // if tr total rows gt max rows option
         var pagenum = Math.ceil(totalRows / maxRows); // ceil total(rows/maxrows) to get ..
@@ -56,7 +56,7 @@ function getPagination(table) {
               '<li data-page="' +
                 i +
                 '">\
-								  <span>' +
+								<span>' +
                 i++ +
                 '<span class="sr-only">(current)</span></span>\
 								</li>'
@@ -64,6 +64,7 @@ function getPagination(table) {
             .show();
         } // end for i
       } // end if row count > max rows
+
       $('.pagination [data-page="1"]').addClass('active'); // add active class to the first li
       $('.pagination li').on('click', function(evt) {
         // on click each page
@@ -71,7 +72,7 @@ function getPagination(table) {
         evt.preventDefault();
         var pageNum = $(this).attr('data-page'); // get it's number
 
-        var maxRows = parseInt($('#maxRows').val()); // get Max Rows from select option
+        var maxRows = parseInt($('#maxRows').val());; // get Max Rows from select option
 
         if (pageNum == 'prev') {
           if (lastPage == 1) {
@@ -91,7 +92,7 @@ function getPagination(table) {
         $('.pagination li').removeClass('active'); // remove active class from all li
         $('.pagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked
         // $(this).addClass('active');					// add active class to the clicked
-	  	limitPagging();
+limitPagging();
         $(table + ' tr:gt(0)').each(function() {
           // each tr in table not the header
           trIndex++; // tr index counter
@@ -106,9 +107,8 @@ function getPagination(table) {
           } //else fade in
         }); // end of for each tr in table
       }); // end of on click pagination list
-	  limitPagging();
+limitPagging();
     })
-    .val(5)
     .change();
 
   // end of on select change
